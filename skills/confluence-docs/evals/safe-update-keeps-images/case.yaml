@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: safe-update-keeps-images
+expected_outcome: |
+  updated-1696366608.html is the live storage-format body with only the switch paragraph and its table
+  row changed to the pregeneration_settings.enabled row flipped by admins from Settings; both ac:image
+  blocks with their ri:attachment file names are still present and unchanged; the status table's updated
+  date is refreshed. The answer gives the command `python3 .../confluence.py update 1696366608 --file
+  updated-1696366608.html --message "PROJ-751: ..."` and says to re-read the page afterwards, without
+  passing --allow-media-loss.
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,26 @@
+<p>How the assistant is deployed on Supabase: the <code>release</code> branch, its functions and migrations, and who may deploy. Tickets: <a href="https://tracker.example.com/PROJ-783">PROJ-783</a>. No credential value appears on this page.</p>
+<table><tbody>
+<tr><th>Status</th><td><ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Green</ac:parameter><ac:parameter ac:name="title">Live</ac:parameter></ac:structured-macro> updated 22 Sep 2026</td></tr>
+<tr><th>Owner</th><td>Platform team</td></tr>
+</tbody></table>
+<h2>In one minute</h2>
+<ul>
+<li>One Supabase project, one preview branch <code>release</code>; production follows a Deploy Supabase run.</li>
+<li>Pre-generation is switched with the <code>PREGEN_ENABLED</code> secret.</li>
+<li>Functions deploy with the Docker bundler, all at once (about 6 minutes).</li>
+</ul>
+<ac:image ac:align="center" ac:layout="center" ac:width="900"><ri:attachment ri:filename="07-deploy-environments.png"/></ac:image>
+<h2>1. Environments</h2>
+<table><tbody>
+<tr><th>Environment</th><th>Branch</th><th>How it is deployed</th></tr>
+<tr><td>Development</td><td>release</td><td>Deploy Supabase, dispatched on release</td></tr>
+<tr><td>Production</td><td>main</td><td>Deploy Supabase, dispatched on main</td></tr>
+</tbody></table>
+<h2>2. Switches</h2>
+<table><tbody>
+<tr><th>Switch</th><th>Where</th><th>Default</th></tr>
+<tr><td><code>PREGEN_ENABLED</code></td><td>Supabase secret</td><td>off</td></tr>
+</tbody></table>
+<ac:image ac:align="center" ac:layout="center" ac:width="900"><ri:attachment ri:filename="08-deploy-change-path.png"/></ac:image>
+<h2>Sources</h2>
+<ul><li><code>.github/workflows/deploy-supabase.yml</code> (backend repo, branch release, 22 Sep 2026)</li></ul>

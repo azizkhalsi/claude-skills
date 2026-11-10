@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: how-it-works-page-from-notes
+expected_outcome: |
+  A page body in macros-embedding.html written in the Atlassian connector's HTML dialect (div panels,
+  section layouts, span status; no ac: storage XML), opening with a one-paragraph purpose including the
+  ticket links and the no-credential line, a status table, an "In one minute" list carrying the numbers
+  (00:00 UTC, about 1,900 macros, $31 to $0.12 a month, 26 hours, v3/v2), numbered sections built from
+  tables with cell text wrapped in paragraphs, a native diagram drawn with layout sections and custom
+  panels (no image placeholder), an open-points table and a Sources section. The answer names the
+  parent (Architecture & runtime) and lists the facts it could not verify instead of inventing them.
+  No em dashes, no secret values.
